@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ItemType>TranslationProject</ItemType>
+    <ProjectGuid>{DFFCB96E-D93A-42BC-ADCF-5484D453AE66}</ProjectGuid>
+    <packageName>i8n1</packageName>
+    <outputType>RelativeToOutput</outputType>
+    <relPath>locale</relPath>
+    <translations>
+      <translations>
+        <Translation>
+          <isoCode>de</isoCode>
+        </Translation>
+      </translations>
+    </translations>
+    <projectInformations>
+      <projectInformations>
+        <TranslationProjectInformation>
+          <projectName>ProportionenTest</projectName>
+          <isIncluded>False</isIncluded>
+        </TranslationProjectInformation>
+        <TranslationProjectInformation>
+          <projectName>Proportionen</projectName>
+          <isIncluded>False</isIncluded>
+        </TranslationProjectInformation>
+      </projectInformations>
+    </projectInformations>
+  </PropertyGroup>
+</Project>

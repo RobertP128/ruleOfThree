@@ -1,0 +1,1 @@
+The rule of three. Calculate direct or indirect proportions with the rule of three

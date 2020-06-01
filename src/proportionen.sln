@@ -1,0 +1,35 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proportionen", "proportionen\Proportionen.csproj", "{E9DE6696-6B16-4B86-9E70-34E93FD33BA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProportionenTest", "ProportionenTest\ProportionenTest.csproj", "{94F21891-917E-47A6-B16C-5596758D1BC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProportionenGUI", "ProportionenGUI\ProportionenGUI.csproj", "{7129C9FB-87C4-4E6B-97A2-BB2BAE07E358}"
+EndProject
+Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "ProportionenTrans", "ProportionenTrans\ProportionenTrans.mdproj", "{DFFCB96E-D93A-42BC-ADCF-5484D453AE66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9DE6696-6B16-4B86-9E70-34E93FD33BA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9DE6696-6B16-4B86-9E70-34E93FD33BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9DE6696-6B16-4B86-9E70-34E93FD33BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9DE6696-6B16-4B86-9E70-34E93FD33BA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94F21891-917E-47A6-B16C-5596758D1BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94F21891-917E-47A6-B16C-5596758D1BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94F21891-917E-47A6-B16C-5596758D1BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94F21891-917E-47A6-B16C-5596758D1BC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7129C9FB-87C4-4E6B-97A2-BB2BAE07E358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7129C9FB-87C4-4E6B-97A2-BB2BAE07E358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7129C9FB-87C4-4E6B-97A2-BB2BAE07E358}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7129C9FB-87C4-4E6B-97A2-BB2BAE07E358}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFFCB96E-D93A-42BC-ADCF-5484D453AE66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFFCB96E-D93A-42BC-ADCF-5484D453AE66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFFCB96E-D93A-42BC-ADCF-5484D453AE66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFFCB96E-D93A-42BC-ADCF-5484D453AE66}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

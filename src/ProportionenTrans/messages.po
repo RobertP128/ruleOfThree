@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2020-05-03 17:13:28+0200\n"
+"PO-Revision-Date: 2020-05-03 17:13:28+0200\n"
+"Last-Translator: poppi\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: MonoDevelop Gettext addin\n"
+
+#: ../ProportionenGUI/gtk-gui/MainWindow.cs:37
+msgid "MainWindow"
+msgstr ""
+
+#: ../ProportionenGUI/gtk-gui/MainWindow.cs:67
+msgid "isDirectProp"
+msgstr ""
+
+#: ../ProportionenGUI/gtk-gui/MainWindow.cs:95
+msgid "--result--"
+msgstr ""
+
+#: ../ProportionenGUI/gtk-gui/MainWindow.cs:103
+msgid "------"
+msgstr ""
+
+#: ../ProportionenGUI/gtk-gui/MainWindow.cs:113
+msgid "Calculate"
+msgstr ""
+
+#: ../ProportionenGUI/gtk-gui/MainWindow.cs:121
+msgid "Direct/Indirect Proportionscalculator"
+msgstr ""
+
+#: ../ProportionenGUI/gtk-gui/MainWindow.cs:145
+msgid "?"
+msgstr ""
+
