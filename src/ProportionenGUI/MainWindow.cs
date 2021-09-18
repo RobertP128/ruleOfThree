@@ -1,36 +1,57 @@
-﻿using System;
+using System;
 using Gtk;
-using Proportionen.Controller;
+using UI = Gtk.Builder.ObjectAttribute;
 using Proportionen.Model;
-using Proportionen.PropException;
+using Proportionen.Controller;
 using Proportionen.Validator;
+using Proportionen.PropException;
 
-public partial class MainWindow : Gtk.Window
+namespace ProportionenGUI
 {
-    public MainWindow() : base(Gtk.WindowType.Toplevel)
+    class MainWindow : Window
     {
-        Build();
-    }
+        [UI] private Entry _a_textbx = null;
+        [UI] private Entry _b_textbx = null;
+        [UI] private Entry _c_textbx = null;
 
-    protected void OnDeleteEvent(object sender, DeleteEventArgs a)
-    {
-        Application.Quit();
-        a.RetVal = true;
-    }
+        [UI] private CheckButton _isdirect_chbx = null;
+        [UI] private Button _calculateBtn=null;
 
-    protected void OnCalcBtnClick(object sender, EventArgs e)
+        [UI] private Label _resultLbl=null;
+        [UI] private Label _bottomLeftLbl=null;
+
+
+        public MainWindow() : this(new Builder("MainWindow.glade")) { }
+
+        private MainWindow(Builder builder) : base(builder.GetRawOwnedObject("MainWindow"))
+        {
+            builder.Autoconnect(this);
+
+            DeleteEvent += Window_DeleteEvent;
+            _calculateBtn.Clicked += OnCalcBtnClick;
+        }
+
+        private void Window_DeleteEvent(object sender, DeleteEventArgs a)
+        {
+            Application.Quit();
+        }
+
+
+           protected void OnCalcBtnClick(object sender, EventArgs e)
     {
+        
         // Collect the Data from View
-        BottomLeftLbl.Text = "";
-        resultLbl.Text = "";
+        _bottomLeftLbl.Text = "";
+        _resultLbl.Text = "";
 
         PropData data = new PropData();
+    
         try
         {
-            data.TopLeft = Convert.ToDouble(TopLeftTxf.Text);
-            data.TopRight = Convert.ToDouble(TopRightTxf.Text);
-            data.BottomLeft = Convert.ToDouble(BottomLeftTxf.Text);
-            data.IsDirectProp = IsdirectPropCbx.Active;
+            data.TopLeft = Convert.ToDouble(_a_textbx.Text);
+            data.TopRight = Convert.ToDouble(_b_textbx.Text);
+            data.BottomLeft = Convert.ToDouble(_c_textbx.Text);
+            data.IsDirectProp = _isdirect_chbx.Active;
 
             PropDataValidator vali = new PropDataValidator();
 
@@ -38,19 +59,22 @@ public partial class MainWindow : Gtk.Window
             calculator.CalculateResult(data, vali);
 
             // write back the results to the view
-            BottomLeftLbl.Text = data.BottomLeft.ToString();
-            resultLbl.Text = data.BottomRight.ToString();
+            _c_textbx.Text = data.BottomLeft.ToString();
+            _resultLbl.Text = data.BottomRight.ToString();
+            _bottomLeftLbl.Text = _c_textbx.Text;
         }
         catch(PropException pe)
         {
-            resultLbl.Text = "A problem occurred. ErrorCode:" + pe.Error;
+            _resultLbl.Text = "A problem occurred. ErrorCode:" + pe.Error;
         }
         catch (Exception ex)
         {
-            resultLbl.Text = "Invalid Data provided." + ex.Message;
+            _resultLbl.Text = "Invalid Data provided." + ex.Message;
         }
 
         // Caclulate the Data
         // Write results
+        
+    }
     }
 }
